@@ -3383,7 +3383,8 @@
             "type": "Feature",
             "properties": {
                 "seat": "16",
-                "row": "J"
+                "row": "J",
+                "rating": "6.0"
             },
             "geometry": {
                 "type": "Point",
