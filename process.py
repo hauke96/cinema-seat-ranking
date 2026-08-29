@@ -7,6 +7,8 @@ import json
 import math
 import sys
 
+geojson.geometry.DEFAULT_PRECISION = 8
+
 @click.group(chain=True)
 def main():
     pass
@@ -63,15 +65,19 @@ def update_estimates(seat_map, rating_file):
         unknownSeats = [s for s in seatFeatures if s['properties'].get('rating') == None]
 
         # Determine rating estimates according to the inverese distance weighting interpolation: https://en.wikipedia.org/wiki/Inverse_distance_weighting
-        distancePowerParam = 2
+        distancePowerParam = 10
         for unknownSeat in unknownSeats:
             sumOfWeights = 0.0
             sumOfWeightedRatings = 0.0
+            minDistanceToNextKnownSeat = float("inf")
 
             for knownSeat in knownSeats:
                 c1 = (unknownSeat['geometry']['coordinates'][0], unknownSeat['geometry']['coordinates'][1])
                 c2 = (knownSeat['geometry']['coordinates'][0], knownSeat['geometry']['coordinates'][1])
                 distance = geopy.distance.geodesic(c1, c2).m
+
+                if distance < minDistanceToNextKnownSeat:
+                    minDistanceToNextKnownSeat = distance
 
                 weight = 1.0 / math.pow(distance, distancePowerParam)
 
@@ -79,6 +85,13 @@ def update_estimates(seat_map, rating_file):
                 sumOfWeightedRatings += weight * float(knownSeat['properties']['rating'])
 
             unknownSeat['properties']['rating_estimate'] = sumOfWeightedRatings / sumOfWeights
+
+            certaintyDistanceFactor = 0.05 # smaller value (i.e. closer to 0) means that the certainty spreads out and estimates for distant seats are considered relatively certain.
+            certainty = -certaintyDistanceFactor * math.pow(minDistanceToNextKnownSeat, 2) + 1 # +1 to get a max value of 1
+            unknownSeat['properties']['certainty'] = max(0, certainty)
+
+        for knownSeat in knownSeats:
+            knownSeat['properties']['certainty'] = 1_000_000 # A non-infinity number but can be interpreted as "I'm a 100% sure"
 
         file.seek(0)
         file.write(json.dumps(geojson_data, indent=4))
