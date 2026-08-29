@@ -8,4 +8,4 @@ Visualize the best seat in your cinema.
 
 1. `python3 -m venv .venv`
 2. `source .venv/bin/activate`
-3. `pip install click geojson`
+3. `pip install click geojson geopy`

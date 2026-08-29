@@ -2,7 +2,10 @@
 
 import click
 import geojson
+import geopy.distance
+import json
 import math
+import sys
 
 @click.group(chain=True)
 def main():
@@ -42,42 +45,44 @@ def validate(seat_map, rating_file):
     if foundError:
         print()
         print("ERRORS FOUND!")
-        # TODO exit 1
+        sys.exit(1)
 
     pass
 
 @main.command()
-@click.option('--seat-map', type=click.File('wb'))
-@click.option('--rating-file', type=click.File('rb'))
+@click.option('--seat-map', type=click.Path(exists=True))
+@click.option('--rating-file', type=click.Path(exists=True))
 def update_estimates(seat_map, rating_file):
     foundError = False
 
-    with seat_map as file:
+    with open(seat_map, 'r+') as file:
         geojson_data = geojson.load(file)
 
-    seatFeatures = [f for f in geojson_data['features'] if f['geometry']['type'] == 'Point' and f['properties']['row'] != None]
-    knownSeats = [s for s in seatFeatures if s['properties']['rating'] != None]
-    unknownSeats = [s for s in seatFeatures if s['properties']['rating'] == None]
+        seatFeatures = [f for f in geojson_data['features'] if f['geometry']['type'] == 'Point' and f['properties']['row'] != None]
+        knownSeats = [s for s in seatFeatures if s['properties'].get('rating') != None]
+        unknownSeats = [s for s in seatFeatures if s['properties'].get('rating') == None]
 
-    # Determine rating estimates according to the inverese distance weighting interpolation: https://en.wikipedia.org/wiki/Inverse_distance_weighting
-    distancePowerParam = 2
-    for unknownSeat in unknownSeats:
-        sumOfWeights = 0.0
-        sumOfWeightedRatings = 0.0
+        # Determine rating estimates according to the inverese distance weighting interpolation: https://en.wikipedia.org/wiki/Inverse_distance_weighting
+        distancePowerParam = 2
+        for unknownSeat in unknownSeats:
+            sumOfWeights = 0.0
+            sumOfWeightedRatings = 0.0
 
-        for knownSeat in knownSeats:
-            dx = unknownSeat['geometry']['coordinates'][0] - knownSeat['geometry']['coordinates'][0]
-            dy = unknownSeat['geometry']['coordinates'][1] - knownSeat['geometry']['coordinates'][1]
-            distance = math.sqrt(dx*dx + dy*dy)
+            for knownSeat in knownSeats:
+                c1 = (unknownSeat['geometry']['coordinates'][0], unknownSeat['geometry']['coordinates'][1])
+                c2 = (knownSeat['geometry']['coordinates'][0], knownSeat['geometry']['coordinates'][1])
+                distance = geopy.distance.geodesic(c1, c2).m
 
-            weight = 1.0 / math.pow(distance, distancePowerParam)
+                weight = 1.0 / math.pow(distance, distancePowerParam)
 
-            sumOfWeights += weight
-            sumOfWeightedRatings += weight * float(knownSeat['properties']['rating'])
+                sumOfWeights += weight
+                sumOfWeightedRatings += weight * float(knownSeat['properties']['rating'])
 
-        unknownSeat['properties']['rating_estimate'] = sumOfWeightedRatings / sumOfWeights
+            unknownSeat['properties']['rating_estimate'] = sumOfWeightedRatings / sumOfWeights
 
-    print(geojson.dumps(unknownSeats))
+        file.seek(0)
+        file.write(json.dumps(geojson_data, indent=4))
+        file.truncate()
 
 if __name__ == '__main__':
     main()
