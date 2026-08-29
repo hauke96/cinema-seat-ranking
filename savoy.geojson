@@ -1077,7 +1077,8 @@
             "type": "Feature",
             "properties": {
                 "seat": "17",
-                "row": "J"
+                "row": "J",
+                "rating": "6.0"
             },
             "geometry": {
                 "type": "Point",
@@ -1133,7 +1134,8 @@
             "type": "Feature",
             "properties": {
                 "seat": "18",
-                "row": "E"
+                "row": "E",
+                "rating": "8.0"
             },
             "geometry": {
                 "type": "Point",
@@ -3103,7 +3105,8 @@
             "type": "Feature",
             "properties": {
                 "seat": "20",
-                "row": "J"
+                "row": "J",
+                "rating": "4.0"
             },
             "geometry": {
                 "type": "Point",
@@ -3804,7 +3807,8 @@
             "type": "Feature",
             "properties": {
                 "seat": "14",
-                "row": "K"
+                "row": "K",
+                "rating": "7.0"
             },
             "geometry": {
                 "type": "Point",
