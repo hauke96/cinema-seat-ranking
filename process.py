@@ -84,11 +84,11 @@ def update_estimates(seat_map, rating_file):
                 sumOfWeights += weight
                 sumOfWeightedRatings += weight * float(knownSeat['properties']['rating'])
 
-            unknownSeat['properties']['rating_estimate'] = sumOfWeightedRatings / sumOfWeights
-
             certaintyDistanceFactor = 0.05 # smaller value (i.e. closer to 0) means that the certainty spreads out and estimates for distant seats are considered relatively certain.
-            certainty = -certaintyDistanceFactor * math.pow(minDistanceToNextKnownSeat, 2) + 1 # +1 to get a max value of 1
-            unknownSeat['properties']['certainty'] = max(0, certainty)
+            certainty = max(0, -1 * certaintyDistanceFactor * math.pow(minDistanceToNextKnownSeat, 2) + 1) # +1 to get a max value of 1
+            unknownSeat['properties']['certainty'] = certainty
+
+            unknownSeat['properties']['rating_estimate'] = (sumOfWeightedRatings / sumOfWeights) * certainty
 
         for knownSeat in knownSeats:
             knownSeat['properties']['certainty'] = 1_000_000 # A non-infinity number but can be interpreted as "I'm a 100% sure"
