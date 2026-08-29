@@ -1034,7 +1034,8 @@
             "type": "Feature",
             "properties": {
                 "seat": "13",
-                "row": "G"
+                "row": "G",
+                "rating": "10"
             },
             "geometry": {
                 "type": "Point",
