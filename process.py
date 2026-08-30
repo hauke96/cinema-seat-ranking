@@ -5,7 +5,9 @@ import geojson
 import geopy.distance
 import json
 import math
+import re
 import sys
+import os
 from qgis.core import *
 
 geojson.geometry.DEFAULT_PRECISION = 8
@@ -54,6 +56,9 @@ def validate(seat_map):
 @click.option('--output', type=click.Path())
 def update_estimates(seat_map, output):
     foundError = False
+
+    if output == None:
+        output = "./processed-data.geojson"
 
     with open(seat_map, 'r') as file:
         print(f"Load data from {seat_map}")
@@ -106,12 +111,15 @@ def update_estimates(seat_map, output):
     print("Done")
 
 @main.command()
-def render():
+@click.option('--seat-map', type=click.Path())
+def render(seat_map):
     extent = None
-    dataFile = "./processed-data.geojson"
 
-    print(f"Read data file {dataFile}")
-    with open(dataFile, 'r') as file:
+    if seat_map == None:
+        seat_map = "./processed-data.geojson"
+
+    print(f"Read data file {seat_map}")
+    with open(seat_map, 'r') as file:
         geojson_data = geojson.load(file)
 
         xCoords = []
@@ -197,6 +205,13 @@ def render():
 
     print("Prepare exporter")
     exporter = QgsLayoutExporter(layout)
+
+    print("Set given input file as data source")
+    for layerName in project.mapLayers():
+        layer = project.layerStore().mapLayer(layerName)
+        absPathToFile = os.path.abspath(seat_map)
+        newDataSource = re.sub(r'.*?/processed-data.geojson\|', f"{absPathToFile}|", layer.source())
+        layer.setDataSource(newDataSource)
 
     print("Export all themes")
     for theme_name in themes:
