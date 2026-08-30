@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" saveDateTime="2026-08-30T11:48:44" saveUser="hauke" saveUserFull="" version="4.0.3-Norrköping">
+<qgis projectname="" saveDateTime="2026-08-30T12:23:38" saveUser="hauke" saveUserFull="" version="4.0.3-Norrköping">
   <homePath path=""/>
   <title></title>
   <transaction mode="Disabled"/>
@@ -39,27 +39,31 @@
       <customproperties>
         <Option type="Map">
           <Option name="cached_name" type="QString" value="seats (certainty)"/>
+          <Option name="expandedLegendNodes"/>
         </Option>
       </customproperties>
     </layer-tree-layer>
-    <layer-tree-layer checked="Qt::Unchecked" expanded="0" id="processed-data_725fb9e1_282f_476f_93a4_c7b0461a018d" legend_exp="" legend_split_behavior="0" name="seats (estimates)" patch_size="-1,-1" providerKey="ogr" source="./processed-data.geojson|subset=&quot;rating&quot; IS NULL AND &quot;rating_estimate&quot; IS NOT NULL">
+    <layer-tree-layer checked="Qt::Checked" expanded="0" id="processed-data_725fb9e1_282f_476f_93a4_c7b0461a018d" legend_exp="" legend_split_behavior="0" name="seats (estimates)" patch_size="-1,-1" providerKey="ogr" source="./processed-data.geojson|subset=&quot;rating&quot; IS NULL AND &quot;rating_estimate&quot; IS NOT NULL">
       <customproperties>
         <Option type="Map">
           <Option name="cached_name" type="QString" value="seats (estimates)"/>
+          <Option name="expandedLegendNodes"/>
         </Option>
       </customproperties>
     </layer-tree-layer>
-    <layer-tree-layer checked="Qt::Unchecked" expanded="0" id="processed-data_c839e8d4_52e1_4c77_89bd_4cd05f4718e4" legend_exp="" legend_split_behavior="0" name="seats (ratings)" patch_size="-1,-1" providerKey="ogr" source="./processed-data.geojson|subset=&quot;rating&quot; IS NOT NULL">
+    <layer-tree-layer checked="Qt::Checked" expanded="0" id="processed-data_c839e8d4_52e1_4c77_89bd_4cd05f4718e4" legend_exp="" legend_split_behavior="0" name="seats (ratings)" patch_size="-1,-1" providerKey="ogr" source="./processed-data.geojson|subset=&quot;rating&quot; IS NOT NULL">
       <customproperties>
         <Option type="Map">
           <Option name="cached_name" type="QString" value="seats (ratings)"/>
+          <Option name="expandedLegendNodes"/>
         </Option>
       </customproperties>
     </layer-tree-layer>
-    <layer-tree-layer checked="Qt::Checked" expanded="0" id="seats__certainty__b6e333a4_026e_47ff_b989_d460408a422e" legend_exp="" legend_split_behavior="0" name="seats" patch_size="-1,-1" providerKey="ogr" source="./processed-data.geojson|subset=&quot;row&quot; IS NOT NULL AND &quot;seat&quot; IS NOT NULL">
+    <layer-tree-layer checked="Qt::Unchecked" expanded="0" id="seats__certainty__b6e333a4_026e_47ff_b989_d460408a422e" legend_exp="" legend_split_behavior="0" name="seats" patch_size="-1,-1" providerKey="ogr" source="./processed-data.geojson|subset=&quot;row&quot; IS NOT NULL AND &quot;seat&quot; IS NOT NULL">
       <customproperties>
         <Option type="Map">
           <Option name="cached_name" type="QString" value="seats (certainty)"/>
+          <Option name="expandedLegendNodes"/>
         </Option>
       </customproperties>
     </layer-tree-layer>
@@ -67,6 +71,7 @@
       <customproperties>
         <Option type="Map">
           <Option name="cached_name" type="QString" value="screen"/>
+          <Option name="expandedLegendNodes"/>
         </Option>
       </customproperties>
     </layer-tree-layer>
@@ -74,13 +79,23 @@
       <customproperties>
         <Option type="Map">
           <Option name="cached_name" type="QString" value="walls"/>
+          <Option name="expandedLegendNodes"/>
         </Option>
       </customproperties>
     </layer-tree-layer>
-    <layer-tree-layer checked="Qt::Checked" expanded="1" id="walls_886dba19_69a3_4aa5_a205_3286d9146793" legend_exp="" legend_split_behavior="0" name="doors" patch_size="-1,-1" providerKey="ogr" source="./processed-data.geojson|geometrytype=LineString|subset=&quot;indoor&quot; IN ('door', 'double_door')">
+    <layer-tree-layer checked="Qt::Checked" expanded="1" id="walls_a2489169_050e_4f27_b56d_9e89dd487428" legend_exp="" legend_split_behavior="0" name="room divider" patch_size="-1,-1" providerKey="ogr" source="./processed-data.geojson|geometrytype=LineString|subset=&quot;indoor&quot; = 'room_divider'">
+      <customproperties>
+        <Option type="Map">
+          <Option name="cached_name" type="QString" value="walls"/>
+          <Option name="expandedLegendNodes"/>
+        </Option>
+      </customproperties>
+    </layer-tree-layer>
+    <layer-tree-layer checked="Qt::Checked" expanded="1" id="walls_886dba19_69a3_4aa5_a205_3286d9146793" legend_exp="" legend_split_behavior="0" name="doors" patch_size="-1,-1" providerKey="ogr" source="./processed-data.geojson|geometrytype=LineString|subset=&quot;indoor&quot; = 'door'">
       <customproperties>
         <Option type="Map">
           <Option name="cached_name" type="QString" value="doors"/>
+          <Option name="expandedLegendNodes"/>
         </Option>
       </customproperties>
     </layer-tree-layer>
@@ -88,6 +103,7 @@
       <customproperties>
         <Option type="Map">
           <Option name="cached_name" type="QString" value="view axis"/>
+          <Option name="expandedLegendNodes"/>
         </Option>
       </customproperties>
     </layer-tree-layer>
@@ -108,6 +124,7 @@
       <item>screen_0177ba58_d7ec_4cd1_8b72_40d5c967b002</item>
       <item>walls_886dba19_69a3_4aa5_a205_3286d9146793</item>
       <item>seats__certainty__b6e333a4_026e_47ff_b989_d460408a422e</item>
+      <item>walls_a2489169_050e_4f27_b56d_9e89dd487428</item>
     </custom-order>
   </layer-tree-group>
   <snapping-settings enabled="0" intersection-snapping="0" maxScale="0" minScale="0" mode="2" scaleDependencyMode="0" self-snapping="0" tolerance="12" type="1" unit="1">
@@ -118,6 +135,7 @@
       <layer-setting enabled="0" id="Seats__estimates__5aa1605e_342c_48d4_abdd_6e9e4c322858" maxScale="0" minScale="0" tolerance="12" type="1" units="1"/>
       <layer-setting enabled="0" id="processed-data_5647ebda_5a4f_4d2c_8fc4_b4ec47521fd6" maxScale="0" minScale="0" tolerance="12" type="1" units="1"/>
       <layer-setting enabled="0" id="screen_0177ba58_d7ec_4cd1_8b72_40d5c967b002" maxScale="0" minScale="0" tolerance="12" type="1" units="1"/>
+      <layer-setting enabled="0" id="walls_a2489169_050e_4f27_b56d_9e89dd487428" maxScale="0" minScale="0" tolerance="12" type="1" units="1"/>
       <layer-setting enabled="0" id="walls_886dba19_69a3_4aa5_a205_3286d9146793" maxScale="0" minScale="0" tolerance="12" type="1" units="1"/>
       <layer-setting enabled="0" id="processed-data_c839e8d4_52e1_4c77_89bd_4cd05f4718e4" maxScale="0" minScale="0" tolerance="12" type="1" units="1"/>
     </individual-layer-settings>
@@ -155,19 +173,19 @@
         <legendlayerfile isInOverview="0" layerid="Seats__estimates__5aa1605e_342c_48d4_abdd_6e9e4c322858" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer checked="Qt::Unchecked" drawingOrder="-1" name="seats (estimates)" open="false" showFeatureCount="0">
+    <legendlayer checked="Qt::Checked" drawingOrder="-1" name="seats (estimates)" open="false" showFeatureCount="0">
       <filegroup hidden="false" open="false">
-        <legendlayerfile isInOverview="0" layerid="processed-data_725fb9e1_282f_476f_93a4_c7b0461a018d" visible="0"/>
+        <legendlayerfile isInOverview="0" layerid="processed-data_725fb9e1_282f_476f_93a4_c7b0461a018d" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer checked="Qt::Unchecked" drawingOrder="-1" name="seats (ratings)" open="false" showFeatureCount="0">
+    <legendlayer checked="Qt::Checked" drawingOrder="-1" name="seats (ratings)" open="false" showFeatureCount="0">
       <filegroup hidden="false" open="false">
-        <legendlayerfile isInOverview="0" layerid="processed-data_c839e8d4_52e1_4c77_89bd_4cd05f4718e4" visible="0"/>
+        <legendlayerfile isInOverview="0" layerid="processed-data_c839e8d4_52e1_4c77_89bd_4cd05f4718e4" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer checked="Qt::Checked" drawingOrder="-1" name="seats" open="false" showFeatureCount="0">
+    <legendlayer checked="Qt::Unchecked" drawingOrder="-1" name="seats" open="false" showFeatureCount="0">
       <filegroup hidden="false" open="false">
-        <legendlayerfile isInOverview="0" layerid="seats__certainty__b6e333a4_026e_47ff_b989_d460408a422e" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="seats__certainty__b6e333a4_026e_47ff_b989_d460408a422e" visible="0"/>
       </filegroup>
     </legendlayer>
     <legendlayer checked="Qt::Checked" drawingOrder="-1" name="screen" open="true" showFeatureCount="0">
@@ -178,6 +196,11 @@
     <legendlayer checked="Qt::Checked" drawingOrder="-1" name="walls" open="true" showFeatureCount="0">
       <filegroup hidden="false" open="true">
         <legendlayerfile isInOverview="0" layerid="screen_0177ba58_d7ec_4cd1_8b72_40d5c967b002" visible="1"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer checked="Qt::Checked" drawingOrder="-1" name="room divider" open="true" showFeatureCount="0">
+      <filegroup hidden="false" open="true">
+        <legendlayerfile isInOverview="0" layerid="walls_a2489169_050e_4f27_b56d_9e89dd487428" visible="1"/>
       </filegroup>
     </legendlayer>
     <legendlayer checked="Qt::Checked" drawingOrder="-1" name="doors" open="true" showFeatureCount="0">
@@ -1685,13 +1708,6 @@
       <referencedLayers/>
       <referencingLayers/>
       <fieldConfiguration>
-        <field configurationFlags="NoFlag" name="certainty">
-          <editWidget type="">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
         <field configurationFlags="NoFlag" name="cinema">
           <editWidget type="">
             <config>
@@ -1700,13 +1716,6 @@
           </editWidget>
         </field>
         <field configurationFlags="NoFlag" name="indoor">
-          <editWidget type="">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field configurationFlags="NoFlag" name="rating_estimate">
           <editWidget type="">
             <config>
               <Option/>
@@ -1734,42 +1743,56 @@
             </config>
           </editWidget>
         </field>
+        <field configurationFlags="NoFlag" name="certainty">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="NoFlag" name="rating_estimate">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
       </fieldConfiguration>
       <aliases>
-        <alias field="certainty" index="0" name=""/>
-        <alias field="cinema" index="1" name=""/>
-        <alias field="indoor" index="2" name=""/>
-        <alias field="rating_estimate" index="3" name=""/>
-        <alias field="row" index="4" name=""/>
-        <alias field="seat" index="5" name=""/>
-        <alias field="rating" index="6" name=""/>
+        <alias field="cinema" index="0" name=""/>
+        <alias field="indoor" index="1" name=""/>
+        <alias field="row" index="2" name=""/>
+        <alias field="seat" index="3" name=""/>
+        <alias field="rating" index="4" name=""/>
+        <alias field="certainty" index="5" name=""/>
+        <alias field="rating_estimate" index="6" name=""/>
       </aliases>
       <defaults>
-        <default applyOnUpdate="0" expression="" field="certainty"/>
         <default applyOnUpdate="0" expression="" field="cinema"/>
         <default applyOnUpdate="0" expression="" field="indoor"/>
-        <default applyOnUpdate="0" expression="" field="rating_estimate"/>
         <default applyOnUpdate="0" expression="" field="row"/>
         <default applyOnUpdate="0" expression="" field="seat"/>
         <default applyOnUpdate="0" expression="" field="rating"/>
+        <default applyOnUpdate="0" expression="" field="certainty"/>
+        <default applyOnUpdate="0" expression="" field="rating_estimate"/>
       </defaults>
       <constraints>
-        <constraint constraints="0" exp_strength="0" field="certainty" notnull_strength="0" unique_strength="0"/>
         <constraint constraints="0" exp_strength="0" field="cinema" notnull_strength="0" unique_strength="0"/>
         <constraint constraints="0" exp_strength="0" field="indoor" notnull_strength="0" unique_strength="0"/>
-        <constraint constraints="0" exp_strength="0" field="rating_estimate" notnull_strength="0" unique_strength="0"/>
         <constraint constraints="0" exp_strength="0" field="row" notnull_strength="0" unique_strength="0"/>
         <constraint constraints="0" exp_strength="0" field="seat" notnull_strength="0" unique_strength="0"/>
         <constraint constraints="0" exp_strength="0" field="rating" notnull_strength="0" unique_strength="0"/>
+        <constraint constraints="0" exp_strength="0" field="certainty" notnull_strength="0" unique_strength="0"/>
+        <constraint constraints="0" exp_strength="0" field="rating_estimate" notnull_strength="0" unique_strength="0"/>
       </constraints>
       <constraintExpressions>
-        <constraint desc="" exp="" field="certainty"/>
         <constraint desc="" exp="" field="cinema"/>
         <constraint desc="" exp="" field="indoor"/>
-        <constraint desc="" exp="" field="rating_estimate"/>
         <constraint desc="" exp="" field="row"/>
         <constraint desc="" exp="" field="seat"/>
         <constraint desc="" exp="" field="rating"/>
+        <constraint desc="" exp="" field="certainty"/>
+        <constraint desc="" exp="" field="rating_estimate"/>
       </constraintExpressions>
       <expressionfields/>
       <attributeactions>
@@ -2085,13 +2108,6 @@
       <referencedLayers/>
       <referencingLayers/>
       <fieldConfiguration>
-        <field configurationFlags="NoFlag" name="certainty">
-          <editWidget type="">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
         <field configurationFlags="NoFlag" name="cinema">
           <editWidget type="">
             <config>
@@ -2100,13 +2116,6 @@
           </editWidget>
         </field>
         <field configurationFlags="NoFlag" name="indoor">
-          <editWidget type="">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field configurationFlags="NoFlag" name="rating_estimate">
           <editWidget type="">
             <config>
               <Option/>
@@ -2134,42 +2143,56 @@
             </config>
           </editWidget>
         </field>
+        <field configurationFlags="NoFlag" name="certainty">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="NoFlag" name="rating_estimate">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
       </fieldConfiguration>
       <aliases>
-        <alias field="certainty" index="0" name=""/>
-        <alias field="cinema" index="1" name=""/>
-        <alias field="indoor" index="2" name=""/>
-        <alias field="rating_estimate" index="3" name=""/>
-        <alias field="row" index="4" name=""/>
-        <alias field="seat" index="5" name=""/>
-        <alias field="rating" index="6" name=""/>
+        <alias field="cinema" index="0" name=""/>
+        <alias field="indoor" index="1" name=""/>
+        <alias field="row" index="2" name=""/>
+        <alias field="seat" index="3" name=""/>
+        <alias field="rating" index="4" name=""/>
+        <alias field="certainty" index="5" name=""/>
+        <alias field="rating_estimate" index="6" name=""/>
       </aliases>
       <defaults>
-        <default applyOnUpdate="0" expression="" field="certainty"/>
         <default applyOnUpdate="0" expression="" field="cinema"/>
         <default applyOnUpdate="0" expression="" field="indoor"/>
-        <default applyOnUpdate="0" expression="" field="rating_estimate"/>
         <default applyOnUpdate="0" expression="" field="row"/>
         <default applyOnUpdate="0" expression="" field="seat"/>
         <default applyOnUpdate="0" expression="" field="rating"/>
+        <default applyOnUpdate="0" expression="" field="certainty"/>
+        <default applyOnUpdate="0" expression="" field="rating_estimate"/>
       </defaults>
       <constraints>
-        <constraint constraints="0" exp_strength="0" field="certainty" notnull_strength="0" unique_strength="0"/>
         <constraint constraints="0" exp_strength="0" field="cinema" notnull_strength="0" unique_strength="0"/>
         <constraint constraints="0" exp_strength="0" field="indoor" notnull_strength="0" unique_strength="0"/>
-        <constraint constraints="0" exp_strength="0" field="rating_estimate" notnull_strength="0" unique_strength="0"/>
         <constraint constraints="0" exp_strength="0" field="row" notnull_strength="0" unique_strength="0"/>
         <constraint constraints="0" exp_strength="0" field="seat" notnull_strength="0" unique_strength="0"/>
         <constraint constraints="0" exp_strength="0" field="rating" notnull_strength="0" unique_strength="0"/>
+        <constraint constraints="0" exp_strength="0" field="certainty" notnull_strength="0" unique_strength="0"/>
+        <constraint constraints="0" exp_strength="0" field="rating_estimate" notnull_strength="0" unique_strength="0"/>
       </constraints>
       <constraintExpressions>
-        <constraint desc="" exp="" field="certainty"/>
         <constraint desc="" exp="" field="cinema"/>
         <constraint desc="" exp="" field="indoor"/>
-        <constraint desc="" exp="" field="rating_estimate"/>
         <constraint desc="" exp="" field="row"/>
         <constraint desc="" exp="" field="seat"/>
         <constraint desc="" exp="" field="rating"/>
+        <constraint desc="" exp="" field="certainty"/>
+        <constraint desc="" exp="" field="rating_estimate"/>
       </constraintExpressions>
       <expressionfields/>
       <attributeactions>
@@ -4113,13 +4136,6 @@
       <referencedLayers/>
       <referencingLayers/>
       <fieldConfiguration>
-        <field configurationFlags="NoFlag" name="certainty">
-          <editWidget type="">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
         <field configurationFlags="NoFlag" name="cinema">
           <editWidget type="">
             <config>
@@ -4128,13 +4144,6 @@
           </editWidget>
         </field>
         <field configurationFlags="NoFlag" name="indoor">
-          <editWidget type="">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field configurationFlags="NoFlag" name="rating_estimate">
           <editWidget type="">
             <config>
               <Option/>
@@ -4162,42 +4171,56 @@
             </config>
           </editWidget>
         </field>
+        <field configurationFlags="NoFlag" name="certainty">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="NoFlag" name="rating_estimate">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
       </fieldConfiguration>
       <aliases>
-        <alias field="certainty" index="0" name=""/>
-        <alias field="cinema" index="1" name=""/>
-        <alias field="indoor" index="2" name=""/>
-        <alias field="rating_estimate" index="3" name=""/>
-        <alias field="row" index="4" name=""/>
-        <alias field="seat" index="5" name=""/>
-        <alias field="rating" index="6" name=""/>
+        <alias field="cinema" index="0" name=""/>
+        <alias field="indoor" index="1" name=""/>
+        <alias field="row" index="2" name=""/>
+        <alias field="seat" index="3" name=""/>
+        <alias field="rating" index="4" name=""/>
+        <alias field="certainty" index="5" name=""/>
+        <alias field="rating_estimate" index="6" name=""/>
       </aliases>
       <defaults>
-        <default applyOnUpdate="0" expression="" field="certainty"/>
         <default applyOnUpdate="0" expression="" field="cinema"/>
         <default applyOnUpdate="0" expression="" field="indoor"/>
-        <default applyOnUpdate="0" expression="" field="rating_estimate"/>
         <default applyOnUpdate="0" expression="" field="row"/>
         <default applyOnUpdate="0" expression="" field="seat"/>
         <default applyOnUpdate="0" expression="" field="rating"/>
+        <default applyOnUpdate="0" expression="" field="certainty"/>
+        <default applyOnUpdate="0" expression="" field="rating_estimate"/>
       </defaults>
       <constraints>
-        <constraint constraints="0" exp_strength="0" field="certainty" notnull_strength="0" unique_strength="0"/>
         <constraint constraints="0" exp_strength="0" field="cinema" notnull_strength="0" unique_strength="0"/>
         <constraint constraints="0" exp_strength="0" field="indoor" notnull_strength="0" unique_strength="0"/>
-        <constraint constraints="0" exp_strength="0" field="rating_estimate" notnull_strength="0" unique_strength="0"/>
         <constraint constraints="0" exp_strength="0" field="row" notnull_strength="0" unique_strength="0"/>
         <constraint constraints="0" exp_strength="0" field="seat" notnull_strength="0" unique_strength="0"/>
         <constraint constraints="0" exp_strength="0" field="rating" notnull_strength="0" unique_strength="0"/>
+        <constraint constraints="0" exp_strength="0" field="certainty" notnull_strength="0" unique_strength="0"/>
+        <constraint constraints="0" exp_strength="0" field="rating_estimate" notnull_strength="0" unique_strength="0"/>
       </constraints>
       <constraintExpressions>
-        <constraint desc="" exp="" field="certainty"/>
         <constraint desc="" exp="" field="cinema"/>
         <constraint desc="" exp="" field="indoor"/>
-        <constraint desc="" exp="" field="rating_estimate"/>
         <constraint desc="" exp="" field="row"/>
         <constraint desc="" exp="" field="seat"/>
         <constraint desc="" exp="" field="rating"/>
+        <constraint desc="" exp="" field="certainty"/>
+        <constraint desc="" exp="" field="rating_estimate"/>
       </constraintExpressions>
       <expressionfields/>
       <attributeactions>
@@ -4516,13 +4539,6 @@
       <referencedLayers/>
       <referencingLayers/>
       <fieldConfiguration>
-        <field configurationFlags="NoFlag" name="certainty">
-          <editWidget type="">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
         <field configurationFlags="NoFlag" name="cinema">
           <editWidget type="">
             <config>
@@ -4531,13 +4547,6 @@
           </editWidget>
         </field>
         <field configurationFlags="NoFlag" name="indoor">
-          <editWidget type="">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field configurationFlags="NoFlag" name="rating_estimate">
           <editWidget type="">
             <config>
               <Option/>
@@ -4565,42 +4574,56 @@
             </config>
           </editWidget>
         </field>
+        <field configurationFlags="NoFlag" name="certainty">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="NoFlag" name="rating_estimate">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
       </fieldConfiguration>
       <aliases>
-        <alias field="certainty" index="0" name=""/>
-        <alias field="cinema" index="1" name=""/>
-        <alias field="indoor" index="2" name=""/>
-        <alias field="rating_estimate" index="3" name=""/>
-        <alias field="row" index="4" name=""/>
-        <alias field="seat" index="5" name=""/>
-        <alias field="rating" index="6" name=""/>
+        <alias field="cinema" index="0" name=""/>
+        <alias field="indoor" index="1" name=""/>
+        <alias field="row" index="2" name=""/>
+        <alias field="seat" index="3" name=""/>
+        <alias field="rating" index="4" name=""/>
+        <alias field="certainty" index="5" name=""/>
+        <alias field="rating_estimate" index="6" name=""/>
       </aliases>
       <defaults>
-        <default applyOnUpdate="0" expression="" field="certainty"/>
         <default applyOnUpdate="0" expression="" field="cinema"/>
         <default applyOnUpdate="0" expression="" field="indoor"/>
-        <default applyOnUpdate="0" expression="" field="rating_estimate"/>
         <default applyOnUpdate="0" expression="" field="row"/>
         <default applyOnUpdate="0" expression="" field="seat"/>
         <default applyOnUpdate="0" expression="" field="rating"/>
+        <default applyOnUpdate="0" expression="" field="certainty"/>
+        <default applyOnUpdate="0" expression="" field="rating_estimate"/>
       </defaults>
       <constraints>
-        <constraint constraints="0" exp_strength="0" field="certainty" notnull_strength="0" unique_strength="0"/>
         <constraint constraints="0" exp_strength="0" field="cinema" notnull_strength="0" unique_strength="0"/>
         <constraint constraints="0" exp_strength="0" field="indoor" notnull_strength="0" unique_strength="0"/>
-        <constraint constraints="0" exp_strength="0" field="rating_estimate" notnull_strength="0" unique_strength="0"/>
         <constraint constraints="0" exp_strength="0" field="row" notnull_strength="0" unique_strength="0"/>
         <constraint constraints="0" exp_strength="0" field="seat" notnull_strength="0" unique_strength="0"/>
         <constraint constraints="0" exp_strength="0" field="rating" notnull_strength="0" unique_strength="0"/>
+        <constraint constraints="0" exp_strength="0" field="certainty" notnull_strength="0" unique_strength="0"/>
+        <constraint constraints="0" exp_strength="0" field="rating_estimate" notnull_strength="0" unique_strength="0"/>
       </constraints>
       <constraintExpressions>
-        <constraint desc="" exp="" field="certainty"/>
         <constraint desc="" exp="" field="cinema"/>
         <constraint desc="" exp="" field="indoor"/>
-        <constraint desc="" exp="" field="rating_estimate"/>
         <constraint desc="" exp="" field="row"/>
         <constraint desc="" exp="" field="seat"/>
         <constraint desc="" exp="" field="rating"/>
+        <constraint desc="" exp="" field="certainty"/>
+        <constraint desc="" exp="" field="rating_estimate"/>
       </constraintExpressions>
       <expressionfields/>
       <attributeactions>
@@ -4643,7 +4666,7 @@
         <ymax>53.55416773999999691</ymax>
       </wgs84extent>
       <id>walls_886dba19_69a3_4aa5_a205_3286d9146793</id>
-      <datasource>./processed-data.geojson|geometrytype=LineString|subset="indoor" IN ('door', 'double_door')</datasource>
+      <datasource>./processed-data.geojson|geometrytype=LineString|subset="indoor" = 'door'</datasource>
       <layername>doors</layername>
       <srs>
         <spatialrefsys nativeFormat="Wkt">
@@ -4916,13 +4939,6 @@
       <referencedLayers/>
       <referencingLayers/>
       <fieldConfiguration>
-        <field configurationFlags="NoFlag" name="certainty">
-          <editWidget type="">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
         <field configurationFlags="NoFlag" name="cinema">
           <editWidget type="">
             <config>
@@ -4931,13 +4947,6 @@
           </editWidget>
         </field>
         <field configurationFlags="NoFlag" name="indoor">
-          <editWidget type="">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field configurationFlags="NoFlag" name="rating_estimate">
           <editWidget type="">
             <config>
               <Option/>
@@ -4965,42 +4974,456 @@
             </config>
           </editWidget>
         </field>
+        <field configurationFlags="NoFlag" name="certainty">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="NoFlag" name="rating_estimate">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
       </fieldConfiguration>
       <aliases>
-        <alias field="certainty" index="0" name=""/>
-        <alias field="cinema" index="1" name=""/>
-        <alias field="indoor" index="2" name=""/>
-        <alias field="rating_estimate" index="3" name=""/>
-        <alias field="row" index="4" name=""/>
-        <alias field="seat" index="5" name=""/>
-        <alias field="rating" index="6" name=""/>
+        <alias field="cinema" index="0" name=""/>
+        <alias field="indoor" index="1" name=""/>
+        <alias field="row" index="2" name=""/>
+        <alias field="seat" index="3" name=""/>
+        <alias field="rating" index="4" name=""/>
+        <alias field="certainty" index="5" name=""/>
+        <alias field="rating_estimate" index="6" name=""/>
       </aliases>
       <defaults>
-        <default applyOnUpdate="0" expression="" field="certainty"/>
         <default applyOnUpdate="0" expression="" field="cinema"/>
         <default applyOnUpdate="0" expression="" field="indoor"/>
-        <default applyOnUpdate="0" expression="" field="rating_estimate"/>
         <default applyOnUpdate="0" expression="" field="row"/>
         <default applyOnUpdate="0" expression="" field="seat"/>
         <default applyOnUpdate="0" expression="" field="rating"/>
+        <default applyOnUpdate="0" expression="" field="certainty"/>
+        <default applyOnUpdate="0" expression="" field="rating_estimate"/>
       </defaults>
       <constraints>
-        <constraint constraints="0" exp_strength="0" field="certainty" notnull_strength="0" unique_strength="0"/>
         <constraint constraints="0" exp_strength="0" field="cinema" notnull_strength="0" unique_strength="0"/>
         <constraint constraints="0" exp_strength="0" field="indoor" notnull_strength="0" unique_strength="0"/>
-        <constraint constraints="0" exp_strength="0" field="rating_estimate" notnull_strength="0" unique_strength="0"/>
         <constraint constraints="0" exp_strength="0" field="row" notnull_strength="0" unique_strength="0"/>
         <constraint constraints="0" exp_strength="0" field="seat" notnull_strength="0" unique_strength="0"/>
         <constraint constraints="0" exp_strength="0" field="rating" notnull_strength="0" unique_strength="0"/>
+        <constraint constraints="0" exp_strength="0" field="certainty" notnull_strength="0" unique_strength="0"/>
+        <constraint constraints="0" exp_strength="0" field="rating_estimate" notnull_strength="0" unique_strength="0"/>
       </constraints>
       <constraintExpressions>
-        <constraint desc="" exp="" field="certainty"/>
         <constraint desc="" exp="" field="cinema"/>
         <constraint desc="" exp="" field="indoor"/>
-        <constraint desc="" exp="" field="rating_estimate"/>
         <constraint desc="" exp="" field="row"/>
         <constraint desc="" exp="" field="seat"/>
         <constraint desc="" exp="" field="rating"/>
+        <constraint desc="" exp="" field="certainty"/>
+        <constraint desc="" exp="" field="rating_estimate"/>
+      </constraintExpressions>
+      <expressionfields/>
+      <attributeactions>
+        <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
+      </attributeactions>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <storedexpressions/>
+      <editform tolerant="1"></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable/>
+      <labelOnTop/>
+      <reuseLastValuePolicy/>
+      <dataDefinedFieldProperties/>
+      <widgets/>
+      <previewExpression></previewExpression>
+      <mapTip enabled="1"></mapTip>
+    </maplayer>
+    <maplayer autoRefreshMode="Disabled" autoRefreshTime="0" geometry="Line" hasScaleBasedVisibilityFlag="0" labelsEnabled="0" layerType="Vector" legendPlaceholderImage="" maxScale="0" minScale="100000000" readOnly="0" refreshOnNotifyEnabled="0" refreshOnNotifyMessage="" simplifyAlgorithm="0" simplifyDrawingHints="1" simplifyDrawingTol="1" simplifyLocal="1" simplifyMaxScale="1" styleCategories="AllStyleCategories" symbologyReferenceScale="-1" type="vector" wkbType="LineString">
+      <extent>
+        <xmin>10.01413948999999981</xmin>
+        <ymin>53.55371654000000348</ymin>
+        <xmax>10.01464803000000003</xmax>
+        <ymax>53.55416883000000183</ymax>
+      </extent>
+      <wgs84extent>
+        <xmin>10.01413948999999981</xmin>
+        <ymin>53.55371654000000348</ymin>
+        <xmax>10.01464803000000003</xmax>
+        <ymax>53.55416883000000183</ymax>
+      </wgs84extent>
+      <id>walls_a2489169_050e_4f27_b56d_9e89dd487428</id>
+      <datasource>./processed-data.geojson|geometrytype=LineString|subset="indoor" = 'room_divider'</datasource>
+      <layername>room divider</layername>
+      <srs>
+        <spatialrefsys nativeFormat="Wkt">
+          <wkt>GEOGCRS["WGS 84",ENSEMBLE["World Geodetic System 1984 ensemble",MEMBER["World Geodetic System 1984 (Transit)"],MEMBER["World Geodetic System 1984 (G730)"],MEMBER["World Geodetic System 1984 (G873)"],MEMBER["World Geodetic System 1984 (G1150)"],MEMBER["World Geodetic System 1984 (G1674)"],MEMBER["World Geodetic System 1984 (G1762)"],MEMBER["World Geodetic System 1984 (G2139)"],MEMBER["World Geodetic System 1984 (G2296)"],ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]],ENSEMBLEACCURACY[2.0]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],CS[ellipsoidal,2],AXIS["geodetic latitude (Lat)",north,ORDER[1],ANGLEUNIT["degree",0.0174532925199433]],AXIS["geodetic longitude (Lon)",east,ORDER[2],ANGLEUNIT["degree",0.0174532925199433]],USAGE[SCOPE["Horizontal component of 3D system."],AREA["World."],BBOX[-90,-180,90,180]],ID["EPSG",4326]]</wkt>
+          <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+          <srsid>3452</srsid>
+          <srid>4326</srid>
+          <authid>EPSG:4326</authid>
+          <description>WGS 84</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>EPSG:7030</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type>dataset</type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <dates/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys nativeFormat="Wkt">
+            <wkt>GEOGCRS["WGS 84",ENSEMBLE["World Geodetic System 1984 ensemble",MEMBER["World Geodetic System 1984 (Transit)"],MEMBER["World Geodetic System 1984 (G730)"],MEMBER["World Geodetic System 1984 (G873)"],MEMBER["World Geodetic System 1984 (G1150)"],MEMBER["World Geodetic System 1984 (G1674)"],MEMBER["World Geodetic System 1984 (G1762)"],MEMBER["World Geodetic System 1984 (G2139)"],MEMBER["World Geodetic System 1984 (G2296)"],ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]],ENSEMBLEACCURACY[2.0]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],CS[ellipsoidal,2],AXIS["geodetic latitude (Lat)",north,ORDER[1],ANGLEUNIT["degree",0.0174532925199433]],AXIS["geodetic longitude (Lon)",east,ORDER[2],ANGLEUNIT["degree",0.0174532925199433]],USAGE[SCOPE["Horizontal component of 3D system."],AREA["World."],BBOX[-90,-180,90,180]],ID["EPSG",4326]]</wkt>
+            <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+            <srsid>3452</srsid>
+            <srid>4326</srid>
+            <authid>EPSG:4326</authid>
+            <description>WGS 84</description>
+            <projectionacronym>longlat</projectionacronym>
+            <ellipsoidacronym>EPSG:7030</ellipsoidacronym>
+            <geographicflag>true</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <provider encoding="UTF-8">ogr</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+        <Private>0</Private>
+      </flags>
+      <temporal accumulate="0" durationField="" durationUnit="min" enabled="0" endExpression="" endField="" fixedDuration="0" limitMode="0" mode="0" startExpression="" startField="">
+        <fixedRange>
+          <start></start>
+          <end></end>
+        </fixedRange>
+      </temporal>
+      <elevation binding="Centroid" clamping="Terrain" customToleranceEnabled="1" extrusion="0" extrusionEnabled="0" respectLayerSymbol="1" showMarkerSymbolInSurfacePlots="0" symbology="Line" type="IndividualFeatures" zoffset="0" zscale="1">
+        <data-defined-properties>
+          <Option type="Map">
+            <Option name="name" type="QString" value=""/>
+            <Option name="properties"/>
+            <Option name="type" type="QString" value="collection"/>
+          </Option>
+        </data-defined-properties>
+        <profileLineSymbol>
+          <symbol alpha="1" clip_to_extent="1" force_rhr="0" frame_rate="10" is_animated="0" name="" type="line">
+            <data_defined_properties>
+              <Option type="Map">
+                <Option name="name" type="QString" value=""/>
+                <Option name="properties"/>
+                <Option name="type" type="QString" value="collection"/>
+              </Option>
+            </data_defined_properties>
+            <layer class="SimpleLine" enabled="1" id="{cbf4f067-208c-4f6b-8334-d4836e776fa8}" locked="0" pass="0">
+              <Option type="Map">
+                <Option name="align_dash_pattern" type="QString" value="0"/>
+                <Option name="capstyle" type="QString" value="square"/>
+                <Option name="customdash" type="QString" value="5;2"/>
+                <Option name="customdash_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+                <Option name="customdash_unit" type="QString" value="MM"/>
+                <Option name="dash_pattern_offset" type="QString" value="0"/>
+                <Option name="dash_pattern_offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+                <Option name="dash_pattern_offset_unit" type="QString" value="MM"/>
+                <Option name="draw_inside_polygon" type="QString" value="0"/>
+                <Option name="joinstyle" type="QString" value="bevel"/>
+                <Option name="line_color" type="QString" value="225,89,137,255,rgb:0.8823529,0.3490196,0.5372549,1"/>
+                <Option name="line_style" type="QString" value="solid"/>
+                <Option name="line_width" type="QString" value="0.6"/>
+                <Option name="line_width_unit" type="QString" value="MM"/>
+                <Option name="offset" type="QString" value="0"/>
+                <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+                <Option name="offset_unit" type="QString" value="MM"/>
+                <Option name="ring_filter" type="QString" value="0"/>
+                <Option name="trim_distance_end" type="QString" value="0"/>
+                <Option name="trim_distance_end_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+                <Option name="trim_distance_end_unit" type="QString" value="MM"/>
+                <Option name="trim_distance_start" type="QString" value="0"/>
+                <Option name="trim_distance_start_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+                <Option name="trim_distance_start_unit" type="QString" value="MM"/>
+                <Option name="tweak_dash_pattern_on_corners" type="QString" value="0"/>
+                <Option name="use_custom_dash" type="QString" value="0"/>
+                <Option name="width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+              </Option>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option name="name" type="QString" value=""/>
+                  <Option name="properties"/>
+                  <Option name="type" type="QString" value="collection"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </profileLineSymbol>
+        <profileFillSymbol>
+          <symbol alpha="1" clip_to_extent="1" force_rhr="0" frame_rate="10" is_animated="0" name="" type="fill">
+            <data_defined_properties>
+              <Option type="Map">
+                <Option name="name" type="QString" value=""/>
+                <Option name="properties"/>
+                <Option name="type" type="QString" value="collection"/>
+              </Option>
+            </data_defined_properties>
+            <layer class="SimpleFill" enabled="1" id="{e26d4693-0285-47d0-964c-5730fa9d50ac}" locked="0" pass="0">
+              <Option type="Map">
+                <Option name="border_width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+                <Option name="color" type="QString" value="225,89,137,255,rgb:0.8823529,0.3490196,0.5372549,1"/>
+                <Option name="joinstyle" type="QString" value="bevel"/>
+                <Option name="offset" type="QString" value="0,0"/>
+                <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+                <Option name="offset_unit" type="QString" value="MM"/>
+                <Option name="outline_color" type="QString" value="161,64,98,255,rgb:0.6302434,0.2493019,0.3837796,1"/>
+                <Option name="outline_style" type="QString" value="solid"/>
+                <Option name="outline_width" type="QString" value="0.2"/>
+                <Option name="outline_width_unit" type="QString" value="MM"/>
+                <Option name="style" type="QString" value="solid"/>
+              </Option>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option name="name" type="QString" value=""/>
+                  <Option name="properties"/>
+                  <Option name="type" type="QString" value="collection"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </profileFillSymbol>
+        <profileMarkerSymbol>
+          <symbol alpha="1" clip_to_extent="1" force_rhr="0" frame_rate="10" is_animated="0" name="" type="marker">
+            <data_defined_properties>
+              <Option type="Map">
+                <Option name="name" type="QString" value=""/>
+                <Option name="properties"/>
+                <Option name="type" type="QString" value="collection"/>
+              </Option>
+            </data_defined_properties>
+            <layer class="SimpleMarker" enabled="1" id="{a19764f4-6f1f-40cf-8d01-0b4cb80ec854}" locked="0" pass="0">
+              <Option type="Map">
+                <Option name="angle" type="QString" value="0"/>
+                <Option name="cap_style" type="QString" value="square"/>
+                <Option name="color" type="QString" value="225,89,137,255,rgb:0.8823529,0.3490196,0.5372549,1"/>
+                <Option name="horizontal_anchor_point" type="QString" value="1"/>
+                <Option name="joinstyle" type="QString" value="bevel"/>
+                <Option name="name" type="QString" value="diamond"/>
+                <Option name="offset" type="QString" value="0,0"/>
+                <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+                <Option name="offset_unit" type="QString" value="MM"/>
+                <Option name="outline_color" type="QString" value="161,64,98,255,rgb:0.6302434,0.2493019,0.3837796,1"/>
+                <Option name="outline_style" type="QString" value="solid"/>
+                <Option name="outline_width" type="QString" value="0.2"/>
+                <Option name="outline_width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+                <Option name="outline_width_unit" type="QString" value="MM"/>
+                <Option name="scale_method" type="QString" value="diameter"/>
+                <Option name="size" type="QString" value="3"/>
+                <Option name="size_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+                <Option name="size_unit" type="QString" value="MM"/>
+                <Option name="vertical_anchor_point" type="QString" value="1"/>
+              </Option>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option name="name" type="QString" value=""/>
+                  <Option name="properties"/>
+                  <Option name="type" type="QString" value="collection"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </profileMarkerSymbol>
+      </elevation>
+      <renderer-v2 enableorderby="0" forceraster="0" referencescale="-1" symbollevels="0" type="singleSymbol">
+        <symbols>
+          <symbol alpha="1" clip_to_extent="1" force_rhr="0" frame_rate="10" is_animated="0" name="0" type="line">
+            <data_defined_properties>
+              <Option type="Map">
+                <Option name="name" type="QString" value=""/>
+                <Option name="properties"/>
+                <Option name="type" type="QString" value="collection"/>
+              </Option>
+            </data_defined_properties>
+            <layer class="SimpleLine" enabled="1" id="{4020f4ec-221d-47a9-95a9-0e7b29ac6960}" locked="0" pass="0">
+              <Option type="Map">
+                <Option name="align_dash_pattern" type="QString" value="0"/>
+                <Option name="capstyle" type="QString" value="square"/>
+                <Option name="customdash" type="QString" value="5;2"/>
+                <Option name="customdash_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+                <Option name="customdash_unit" type="QString" value="MM"/>
+                <Option name="dash_pattern_offset" type="QString" value="0"/>
+                <Option name="dash_pattern_offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+                <Option name="dash_pattern_offset_unit" type="QString" value="MM"/>
+                <Option name="draw_inside_polygon" type="QString" value="0"/>
+                <Option name="joinstyle" type="QString" value="bevel"/>
+                <Option name="line_color" type="QString" value="166,166,166,255,hsv:0,0,0.65000379085540771,1"/>
+                <Option name="line_style" type="QString" value="solid"/>
+                <Option name="line_width" type="QString" value="0.5"/>
+                <Option name="line_width_unit" type="QString" value="MM"/>
+                <Option name="offset" type="QString" value="0"/>
+                <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+                <Option name="offset_unit" type="QString" value="MM"/>
+                <Option name="ring_filter" type="QString" value="0"/>
+                <Option name="trim_distance_end" type="QString" value="0"/>
+                <Option name="trim_distance_end_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+                <Option name="trim_distance_end_unit" type="QString" value="MM"/>
+                <Option name="trim_distance_start" type="QString" value="0"/>
+                <Option name="trim_distance_start_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+                <Option name="trim_distance_start_unit" type="QString" value="MM"/>
+                <Option name="tweak_dash_pattern_on_corners" type="QString" value="0"/>
+                <Option name="use_custom_dash" type="QString" value="0"/>
+                <Option name="width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+              </Option>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option name="name" type="QString" value=""/>
+                  <Option name="properties"/>
+                  <Option name="type" type="QString" value="collection"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+        <data-defined-properties>
+          <Option type="Map">
+            <Option name="name" type="QString" value=""/>
+            <Option name="properties"/>
+            <Option name="type" type="QString" value="collection"/>
+          </Option>
+        </data-defined-properties>
+      </renderer-v2>
+      <selection mode="Default">
+        <selectionColor invalid="1"/>
+      </selection>
+      <customproperties>
+        <Option/>
+      </customproperties>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <geometryOptions geometryPrecision="0" removeDuplicateNodes="0">
+        <activeChecks type="StringList">
+          <Option type="QString" value=""/>
+        </activeChecks>
+        <checkConfiguration/>
+      </geometryOptions>
+      <legend showLabelLegend="0" type="default-vector"/>
+      <referencedLayers/>
+      <referencingLayers/>
+      <fieldConfiguration>
+        <field configurationFlags="NoFlag" name="cinema">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="NoFlag" name="indoor">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="NoFlag" name="row">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="NoFlag" name="seat">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="NoFlag" name="rating">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="NoFlag" name="certainty">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="NoFlag" name="rating_estimate">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias field="cinema" index="0" name=""/>
+        <alias field="indoor" index="1" name=""/>
+        <alias field="row" index="2" name=""/>
+        <alias field="seat" index="3" name=""/>
+        <alias field="rating" index="4" name=""/>
+        <alias field="certainty" index="5" name=""/>
+        <alias field="rating_estimate" index="6" name=""/>
+      </aliases>
+      <defaults>
+        <default applyOnUpdate="0" expression="" field="cinema"/>
+        <default applyOnUpdate="0" expression="" field="indoor"/>
+        <default applyOnUpdate="0" expression="" field="row"/>
+        <default applyOnUpdate="0" expression="" field="seat"/>
+        <default applyOnUpdate="0" expression="" field="rating"/>
+        <default applyOnUpdate="0" expression="" field="certainty"/>
+        <default applyOnUpdate="0" expression="" field="rating_estimate"/>
+      </defaults>
+      <constraints>
+        <constraint constraints="0" exp_strength="0" field="cinema" notnull_strength="0" unique_strength="0"/>
+        <constraint constraints="0" exp_strength="0" field="indoor" notnull_strength="0" unique_strength="0"/>
+        <constraint constraints="0" exp_strength="0" field="row" notnull_strength="0" unique_strength="0"/>
+        <constraint constraints="0" exp_strength="0" field="seat" notnull_strength="0" unique_strength="0"/>
+        <constraint constraints="0" exp_strength="0" field="rating" notnull_strength="0" unique_strength="0"/>
+        <constraint constraints="0" exp_strength="0" field="certainty" notnull_strength="0" unique_strength="0"/>
+        <constraint constraints="0" exp_strength="0" field="rating_estimate" notnull_strength="0" unique_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint desc="" exp="" field="cinema"/>
+        <constraint desc="" exp="" field="indoor"/>
+        <constraint desc="" exp="" field="row"/>
+        <constraint desc="" exp="" field="seat"/>
+        <constraint desc="" exp="" field="rating"/>
+        <constraint desc="" exp="" field="certainty"/>
+        <constraint desc="" exp="" field="rating_estimate"/>
       </constraintExpressions>
       <expressionfields/>
       <attributeactions>
@@ -5040,6 +5463,7 @@
     <layer id="screen_0177ba58_d7ec_4cd1_8b72_40d5c967b002"/>
     <layer id="walls_886dba19_69a3_4aa5_a205_3286d9146793"/>
     <layer id="seats__certainty__b6e333a4_026e_47ff_b989_d460408a422e"/>
+    <layer id="walls_a2489169_050e_4f27_b56d_9e89dd487428"/>
   </layerorder>
   <labelEngineSettings/>
   <properties name="properties">
@@ -5106,6 +5530,8 @@
       <expanded-legend-nodes id="processed-data_5647ebda_5a4f_4d2c_8fc4_b4ec47521fd6"/>
       <layer expanded="1" id="screen_0177ba58_d7ec_4cd1_8b72_40d5c967b002" style="default" visible="1"/>
       <expanded-legend-nodes id="screen_0177ba58_d7ec_4cd1_8b72_40d5c967b002"/>
+      <layer expanded="1" id="walls_a2489169_050e_4f27_b56d_9e89dd487428" style="default" visible="1"/>
+      <expanded-legend-nodes id="walls_a2489169_050e_4f27_b56d_9e89dd487428"/>
       <layer expanded="1" id="walls_886dba19_69a3_4aa5_a205_3286d9146793" style="default" visible="1"/>
       <expanded-legend-nodes id="walls_886dba19_69a3_4aa5_a205_3286d9146793"/>
       <layer expanded="1" id="processed-data_3b02b598_b925_4c78_902a_5891051b798d" style="default" visible="1"/>
@@ -5120,6 +5546,8 @@
       <expanded-legend-nodes id="processed-data_5647ebda_5a4f_4d2c_8fc4_b4ec47521fd6"/>
       <layer expanded="1" id="screen_0177ba58_d7ec_4cd1_8b72_40d5c967b002" style="default" visible="1"/>
       <expanded-legend-nodes id="screen_0177ba58_d7ec_4cd1_8b72_40d5c967b002"/>
+      <layer expanded="1" id="walls_a2489169_050e_4f27_b56d_9e89dd487428" style="default" visible="1"/>
+      <expanded-legend-nodes id="walls_a2489169_050e_4f27_b56d_9e89dd487428"/>
       <layer expanded="1" id="walls_886dba19_69a3_4aa5_a205_3286d9146793" style="default" visible="1"/>
       <expanded-legend-nodes id="walls_886dba19_69a3_4aa5_a205_3286d9146793"/>
       <layer expanded="1" id="processed-data_3b02b598_b925_4c78_902a_5891051b798d" style="default" visible="1"/>
@@ -5136,6 +5564,8 @@
       <expanded-legend-nodes id="processed-data_5647ebda_5a4f_4d2c_8fc4_b4ec47521fd6"/>
       <layer expanded="1" id="screen_0177ba58_d7ec_4cd1_8b72_40d5c967b002" style="default" visible="1"/>
       <expanded-legend-nodes id="screen_0177ba58_d7ec_4cd1_8b72_40d5c967b002"/>
+      <layer expanded="1" id="walls_a2489169_050e_4f27_b56d_9e89dd487428" style="default" visible="1"/>
+      <expanded-legend-nodes id="walls_a2489169_050e_4f27_b56d_9e89dd487428"/>
       <layer expanded="1" id="walls_886dba19_69a3_4aa5_a205_3286d9146793" style="default" visible="1"/>
       <expanded-legend-nodes id="walls_886dba19_69a3_4aa5_a205_3286d9146793"/>
       <layer expanded="1" id="processed-data_3b02b598_b925_4c78_902a_5891051b798d" style="default" visible="1"/>
@@ -5350,7 +5780,7 @@
       </spatialrefsys>
     </CoordinateCustomCrs>
   </ProjectDisplaySettings>
-  <ProjectGpsSettings autoAddTrackVertices="0" autoCommitFeatures="0" destinationFollowsActiveLayer="1" destinationLayer="seats__certainty__b6e333a4_026e_47ff_b989_d460408a422e" destinationLayerName="seats (certainty) copy" destinationLayerProvider="ogr" destinationLayerSource="/home/hauke/Projekte/Python/cinema-seat-ranking/processed-data.geojson|subset=&quot;certainty&quot; IS NOT NULL">
+  <ProjectGpsSettings autoAddTrackVertices="0" autoCommitFeatures="0" destinationFollowsActiveLayer="1" destinationLayer="walls_886dba19_69a3_4aa5_a205_3286d9146793" destinationLayerName="doors" destinationLayerProvider="ogr" destinationLayerSource="/home/hauke/Projekte/Python/cinema-seat-ranking/processed-data.geojson|geometrytype=LineString|subset=&quot;indoor&quot; IN ('door', 'double_door')">
     <timeStampFields/>
   </ProjectGpsSettings>
 </qgis>
