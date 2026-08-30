@@ -15,8 +15,7 @@ def main():
 
 @main.command()
 @click.option('--seat-map', type=click.File('rb'))
-@click.option('--rating-file', type=click.File('rb'))
-def validate(seat_map, rating_file):
+def validate(seat_map):
     foundError = False
 
     with seat_map as file:
@@ -53,11 +52,11 @@ def validate(seat_map, rating_file):
 
 @main.command()
 @click.option('--seat-map', type=click.Path(exists=True))
-@click.option('--rating-file', type=click.Path(exists=True))
-def update_estimates(seat_map, rating_file):
+@click.option('--output', type=click.Path())
+def update_estimates(seat_map, output):
     foundError = False
 
-    with open(seat_map, 'r+') as file:
+    with open(seat_map, 'r') as file:
         geojson_data = geojson.load(file)
 
         seatFeatures = [f for f in geojson_data['features'] if f['geometry']['type'] == 'Point' and f['properties']['row'] != None]
@@ -93,9 +92,8 @@ def update_estimates(seat_map, rating_file):
         for knownSeat in knownSeats:
             knownSeat['properties']['certainty'] = 1_000_000 # A non-infinity number but can be interpreted as "I'm a 100% sure"
 
-        file.seek(0)
+    with open(output, 'w') as file:
         file.write(json.dumps(geojson_data, indent=4))
-        file.truncate()
 
 if __name__ == '__main__':
     main()
