@@ -6,7 +6,7 @@ Visualize the best seat in your cinema.
 
 ### Setup
 
-1. `python3 -m venv .venv`
+1. `python3 -m venv --system-site-packages .venv`
 2. `source .venv/bin/activate`
 3. `pip install click geojson geopy`
 
@@ -16,3 +16,5 @@ Visualize the best seat in your cinema.
 
 ## Render as map
 
+1. `./process.py render`
+    * The data is read from the file `processed-data.geojson`, which can be generated with the `update-estimates` command above.

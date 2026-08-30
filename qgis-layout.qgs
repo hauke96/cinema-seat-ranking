@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" saveDateTime="2026-08-30T09:50:45" saveUser="hauke" saveUserFull="" version="4.0.3-Norrköping">
+<qgis projectname="" saveDateTime="2026-08-30T11:14:47" saveUser="hauke" saveUserFull="" version="4.0.3-Norrköping">
   <homePath path=""/>
   <title></title>
   <transaction mode="Disabled"/>
@@ -118,12 +118,12 @@
   <mapcanvas annotationsVisible="1" name="theMapCanvas">
     <units>meters</units>
     <extent>
-      <xmin>1114773.86769686359912157</xmin>
-      <ymin>7086075.44348001759499311</ymin>
-      <xmax>1114811.4081405820325017</xmax>
-      <ymax>7086161.13557184021919966</ymax>
+      <xmin>1114762.82693985709920526</xmin>
+      <ymin>7086033.74254001025110483</ymin>
+      <xmax>1114837.90782729396596551</xmax>
+      <ymax>7086205.12672365549951792</ymax>
     </extent>
-    <rotation>-44.5</rotation>
+    <rotation>0</rotation>
     <destinationsrs>
       <spatialrefsys nativeFormat="Wkt">
         <wkt>PROJCRS["WGS 84 / Pseudo-Mercator",BASEGEOGCRS["WGS 84",ENSEMBLE["World Geodetic System 1984 ensemble",MEMBER["World Geodetic System 1984 (Transit)"],MEMBER["World Geodetic System 1984 (G730)"],MEMBER["World Geodetic System 1984 (G873)"],MEMBER["World Geodetic System 1984 (G1150)"],MEMBER["World Geodetic System 1984 (G1674)"],MEMBER["World Geodetic System 1984 (G1762)"],MEMBER["World Geodetic System 1984 (G2139)"],MEMBER["World Geodetic System 1984 (G2296)"],ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]],ENSEMBLEACCURACY[2.0]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4326]],CONVERSION["Popular Visualisation Pseudo-Mercator",METHOD["Popular Visualisation Pseudo Mercator",ID["EPSG",1024]],PARAMETER["Latitude of natural origin",0,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8801]],PARAMETER["Longitude of natural origin",0,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8802]],PARAMETER["False easting",0,LENGTHUNIT["metre",1],ID["EPSG",8806]],PARAMETER["False northing",0,LENGTHUNIT["metre",1],ID["EPSG",8807]]],CS[Cartesian,2],AXIS["easting (X)",east,ORDER[1],LENGTHUNIT["metre",1]],AXIS["northing (Y)",north,ORDER[2],LENGTHUNIT["metre",1]],USAGE[SCOPE["Web mapping and visualisation."],AREA["World between 85.06°S and 85.06°N."],BBOX[-85.06,-180,85.06,180]],ID["EPSG",3857]]</wkt>
@@ -4764,7 +4764,7 @@
             </data_defined_properties>
           </layer>
         </symbol>
-        <LayoutItem background="true" blendMode="0" excludeFromExports="0" frame="false" frameJoinStyle="miter" groupUuid="" id="" itemRotation="0" opacity="1" outlineWidthM="0.3,mm" position="0,0,mm" positionLock="false" positionOnPage="0,0,mm" referencePoint="0" size="297,210,mm" templateUuid="{7e3ebf3e-b139-47b2-8528-db4f4561e792}" type="65638" uuid="{7e3ebf3e-b139-47b2-8528-db4f4561e792}" visibility="1" zValue="0">
+        <LayoutItem background="true" blendMode="0" excludeFromExports="0" frame="false" frameJoinStyle="miter" groupUuid="" id="" itemRotation="0" opacity="1" outlineWidthM="0.3,mm" position="0,0,mm" positionLock="false" positionOnPage="0,0,mm" referencePoint="0" size="200,200,mm" templateUuid="{7e3ebf3e-b139-47b2-8528-db4f4561e792}" type="65638" uuid="{7e3ebf3e-b139-47b2-8528-db4f4561e792}" visibility="1" zValue="0">
           <FrameColor alpha="255" blue="0" green="0" red="0"/>
           <BackgroundColor alpha="255" blue="255" green="255" red="255"/>
           <LayoutObject>
@@ -4813,7 +4813,7 @@
         </LayoutItem>
         <GuideCollection visible="1"/>
       </PageCollection>
-      <LayoutItem background="true" blendMode="0" drawCanvasItems="true" enableZRange="0" excludeFromExports="0" followPreset="false" followPresetName="" frame="false" frameJoinStyle="miter" groupUuid="" id="Map 1" isTemporal="0" itemRotation="0" keepLayerSet="false" labelMargin="0,mm" mapFlags="0" mapRotation="-44.5" opacity="1" outlineWidthM="0.3,mm" position="0,0,mm" positionLock="false" positionOnPage="0,0,mm" referencePoint="0" size="297,210,mm" templateUuid="{bf94a101-6ec7-446b-b62d-47f3728dd16c}" type="65639" uuid="{bf94a101-6ec7-446b-b62d-47f3728dd16c}" visibility="1" zValue="1">
+      <LayoutItem background="true" blendMode="0" drawCanvasItems="true" enableZRange="0" excludeFromExports="0" followPreset="false" followPresetName="certainty" frame="false" frameJoinStyle="miter" groupUuid="" id="Map" isTemporal="0" itemRotation="0" keepLayerSet="false" labelMargin="0,mm" mapFlags="0" mapRotation="0" opacity="1" outlineWidthM="0.3,mm" position="0,0,mm" positionLock="false" positionOnPage="0,0,mm" referencePoint="0" size="200,200,mm" templateUuid="{bf94a101-6ec7-446b-b62d-47f3728dd16c}" type="65639" uuid="{bf94a101-6ec7-446b-b62d-47f3728dd16c}" visibility="1" zValue="1">
         <FrameColor alpha="255" blue="0" green="0" red="0"/>
         <BackgroundColor alpha="255" blue="255" green="255" red="255"/>
         <LayoutObject>
@@ -4828,7 +4828,7 @@
             <Option/>
           </customproperties>
         </LayoutObject>
-        <Extent xmax="1114834.42941154446452856" xmin="1114745.3294115443713963" ymax="7086160.50437523331493139" ymin="7086097.50437523517757654"/>
+        <Extent xmax="1114886.45778349414467812" xmin="1114767.65778349433094263" ymax="7086185.80675972625613213" ymin="7086067.00675972644239664"/>
         <LayerSet/>
         <AtlasMap atlasDriven="0" margin="0.10000000000000001" scalingMode="2"/>
         <labelBlockingItems/>
@@ -4851,9 +4851,9 @@
   <mapViewDocks3D/>
   <Bookmarks/>
   <Sensors/>
-  <ProjectViewSettings UseProjectScales="0" rotation="-44.5">
+  <ProjectViewSettings UseProjectScales="0" rotation="0">
     <Scales/>
-    <DefaultViewExtent xmax="1114862.00910421065054834" xmin="1114723.26673323451541364" ymax="7086187.5087928082793951" ymin="7086049.07025905046612024">
+    <DefaultViewExtent xmax="1114910.67925233603455126" xmin="1114690.0555148150306195" ymax="7086205.12672365549951792" ymin="7086033.74254001025110483">
       <spatialrefsys nativeFormat="Wkt">
         <wkt>PROJCRS["WGS 84 / Pseudo-Mercator",BASEGEOGCRS["WGS 84",ENSEMBLE["World Geodetic System 1984 ensemble",MEMBER["World Geodetic System 1984 (Transit)"],MEMBER["World Geodetic System 1984 (G730)"],MEMBER["World Geodetic System 1984 (G873)"],MEMBER["World Geodetic System 1984 (G1150)"],MEMBER["World Geodetic System 1984 (G1674)"],MEMBER["World Geodetic System 1984 (G1762)"],MEMBER["World Geodetic System 1984 (G2139)"],MEMBER["World Geodetic System 1984 (G2296)"],ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]],ENSEMBLEACCURACY[2.0]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4326]],CONVERSION["Popular Visualisation Pseudo-Mercator",METHOD["Popular Visualisation Pseudo Mercator",ID["EPSG",1024]],PARAMETER["Latitude of natural origin",0,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8801]],PARAMETER["Longitude of natural origin",0,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8802]],PARAMETER["False easting",0,LENGTHUNIT["metre",1],ID["EPSG",8806]],PARAMETER["False northing",0,LENGTHUNIT["metre",1],ID["EPSG",8807]]],CS[Cartesian,2],AXIS["easting (X)",east,ORDER[1],LENGTHUNIT["metre",1]],AXIS["northing (Y)",north,ORDER[2],LENGTHUNIT["metre",1]],USAGE[SCOPE["Web mapping and visualisation."],AREA["World between 85.06°S and 85.06°N."],BBOX[-85.06,-180,85.06,180]],ID["EPSG",3857]]</wkt>
         <proj4>+proj=merc +a=6378137 +b=6378137 +lat_ts=0 +lon_0=0 +x_0=0 +y_0=0 +k=1 +units=m +nadgrids=@null +wktext +no_defs</proj4>
@@ -4918,7 +4918,7 @@
       </spatialrefsys>
     </CoordinateCustomCrs>
   </ProjectDisplaySettings>
-  <ProjectGpsSettings autoAddTrackVertices="0" autoCommitFeatures="0" destinationFollowsActiveLayer="1" destinationLayer="processed-data_c839e8d4_52e1_4c77_89bd_4cd05f4718e4" destinationLayerName="seats (ratings)" destinationLayerProvider="ogr" destinationLayerSource="/home/hauke/Projekte/Python/cinema-seat-ranking/processed-data.geojson|subset=&quot;rating&quot; IS NOT NULL">
+  <ProjectGpsSettings autoAddTrackVertices="0" autoCommitFeatures="0" destinationFollowsActiveLayer="1" destinationLayer="processed-data_3b02b598_b925_4c78_902a_5891051b798d" destinationLayerName="view axis" destinationLayerProvider="ogr" destinationLayerSource="/home/hauke/Projekte/Python/cinema-seat-ranking/processed-data.geojson|geometrytype=LineString|subset=&quot;cinema&quot; = 'view_axis'">
     <timeStampFields/>
   </ProjectGpsSettings>
 </qgis>
