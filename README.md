@@ -12,10 +12,10 @@ Visualize the best seat in your cinema.
 
 ### Processing the data
 
-1. `./process.py update-estimates --seat-map your-cinema-plan.geojson --output processed-data.geojson`
-    * If no output is given, `./processed-data.geojson` will be used.
+1. `./process.py update-estimates --seat-map your-cinema-plan.geojson`
+    * If no `--output ./path/to/file.geojson` is given, `./processed-data.geojson` will be used.
 
 ## Render as map
 
-1. `./process.py render --seat-map path/to/file.geojson`
-    * If no seat map is given, `./processed-data.geojson` will be used.
+1. `./process.py render`
+    * If no `--seat-map path/to/file.geojson` is given, `./processed-data.geojson` will be used.
