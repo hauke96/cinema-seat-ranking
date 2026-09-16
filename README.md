@@ -8,6 +8,8 @@ This example shows the Savoy Filmtheater in Hamburg, Germany, with its layout, s
 
 ## Usage
 
+Execute `run.sh` to update the interpolated data, rendering it to PDFs and updating the PNG image for the README.md
+
 ### Setup
 
 1. `python3 -m venv --system-site-packages .venv`

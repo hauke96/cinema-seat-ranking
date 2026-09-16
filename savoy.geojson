@@ -2359,6 +2359,7 @@
         {
             "type": "Feature",
             "properties": {
+                "rating": "4.5",
                 "row": "H",
                 "seat": "23"
             },
