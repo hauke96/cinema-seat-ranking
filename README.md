@@ -31,7 +31,8 @@ Execute `run.sh` to update the interpolated data, rendering it to PDFs and updat
 1. Get a picture of the plan (online screenshot, website, emergency evacutation map, ...)
 2. Load it into your favorite GIS tool (QGIS, JOSM, ...) and digitize it.
     * Tip: Georeference the image first so that distances between seats are realistic.
-3. 
+3. Add a point feature for each seat with the properties `seat=...` and `row=...` according to the data model below.
+4. Add additional features to the set for nicer rendering results (like ths screen, walls etc.)
 
 ### Data model
 
@@ -50,3 +51,14 @@ A feature will be considered as "seat" when it's a point and the `row` attribute
 | `indoor`          | `wall`                   | `LineString` | A wall of the building. |
 | `indoor`          | `room_divider`           | `LineString` | Some room divider, the edge of a stage, counter, etc. |
 | `indoor`          | `door`                   | `LineString` | A door. |
+
+## Misc
+
+### Sort GeoJSON file for earier editing
+
+For the `savoy.geojson` plan:
+
+`jq '.features |= map(if .properties != null then .properties |= (to_entries | sort_by(.key) | from_entries) else . end)' --indent 4 savoy.geojson > tmp.geojson && mv tmp.geojson savoy.geojson`
+
+This sorts the properties values.
+This makes it easier to find sepcific seats and edit the rating manually.
