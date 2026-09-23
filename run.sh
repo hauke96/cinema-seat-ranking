@@ -2,8 +2,6 @@
 
 source .venv/bin/activate
 
-./process.py update-estimates --seat-map savoy.geojson
-
-./process.py render
+./process.py update-and-render --seat-map savoy.geojson
 
 magick layout_ratings.pdf layout_ratings.png

@@ -182,8 +182,8 @@ def render(seat_map):
 
         # Convert to CRS used in the map
         print("Convert extent to map CRS")
-        sourceCrs = QgsCoordinateReferenceSystem(4326) # WGS84
-        destCrs = QgsCoordinateReferenceSystem(3857) # Mercator
+        sourceCrs = QgsCoordinateReferenceSystem("EPSG:4326") # WGS84
+        destCrs = QgsCoordinateReferenceSystem("EPSG:3857") # Mercator
         transform = QgsCoordinateTransform(sourceCrs, destCrs, QgsProject.instance())
         extent = transform.transformBoundingBox(extent)
 
@@ -238,6 +238,26 @@ def render(seat_map):
 
     print("All themes exported successfully!")
     qgs.exitQgis()
+
+@main.command()
+@click.option('--seat-map', type=click.Path(exists=True))
+@click.option('--output', type=click.Path())
+@click.pass_context
+def update_and_render(ctx, seat_map, output):
+    if output == None:
+        output = "./processed-data.geojson"
+
+    print("Update seat map and render images")
+    print("==========")
+
+    ctx.invoke(update_estimates, seat_map=seat_map, output=output)
+
+    print("==========")
+
+    ctx.invoke(render, seat_map=output)
+
+    print("==========")
+    print("Done")
 
 if __name__ == '__main__':
     main()
