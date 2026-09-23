@@ -2566,6 +2566,7 @@
         {
             "type": "Feature",
             "properties": {
+                "rating": "5.0",
                 "row": "J",
                 "seat": "6"
             },
@@ -2888,7 +2889,6 @@
         {
             "type": "Feature",
             "properties": {
-                "rating": "5.0",
                 "row": "J",
                 "seat": "5"
             },
