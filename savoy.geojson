@@ -2889,6 +2889,7 @@
             "type": "Feature",
             "properties": {
                 "seat": "5",
+                "rating": "5.0",
                 "row": "J"
             },
             "geometry": {
