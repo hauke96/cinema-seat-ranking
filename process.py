@@ -92,8 +92,11 @@ def update_estimates(seat_map, output):
 
                 weight = 1.0 / math.pow(distance, distancePowerParam)
 
+                ratings = [float(x) for x in knownSeat['properties']['rating'].split(";")]
+                avgRating = sum(ratings) / len(ratings)
+
                 sumOfWeights += weight
-                sumOfWeightedRatings += weight * float(knownSeat['properties']['rating'])
+                sumOfWeightedRatings += weight * float(avgRating)
 
             certainty = max(0, -1 * certaintyDistanceFactor * math.pow(minDistanceToNextKnownSeat, 2) + 1) # +1 to get a max value of 1
             unknownSeat['properties']['certainty'] = certainty

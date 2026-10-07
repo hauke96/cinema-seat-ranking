@@ -45,7 +45,7 @@ A feature will be considered as "seat" when it's a point and the `row` attribute
 |-------------------|--------------------------|--------------|-------------|
 | `row`             | Any (`A`, `3`, etc.)     | `Point`      | The name/id of the row. |
 | `seat` (optional) | Number (`3`, `12`, etc.) | `Point`      | The row number. Only used by the `validate` command of the script. |
-| `rating`          | Float (0.0 - 10.0)       | `Point`      | The rating for this seat. Higher means better seat. |
+| `rating`          | Floats (0.0 - 10.0)      | `Point`      | The rating for this seat. Higher means better seat. Mutliple values possible, they can be separated by `;`. The average is then used. |
 | `cinema`          | `screen`                 | `LineString` | The screen of the theater. |
 | `indoor`          | `view_axis`              | `LineString` | The central view axis. Seats on this line look exactly to the center of the screen. |
 | `indoor`          | `wall`                   | `LineString` | A wall of the building. |
@@ -58,7 +58,11 @@ A feature will be considered as "seat" when it's a point and the `row` attribute
 
 For the `savoy.geojson` plan:
 
-`jq '.features |= map(if .properties != null then .properties |= (to_entries | sort_by(.key) | from_entries) else . end)' --indent 4 savoy.geojson > tmp.geojson && mv tmp.geojson savoy.geojson`
+`jq '.features |= (map(if .properties != null then .properties |= (to_entries | sort_by(.key) | from_entries) else . end) | sort_by(.properties.row, if .properties.seat != null then .properties.seat | tonumber else 0 end))' --indent 4 savoy.geojson > tmp.geojson && mv tmp.geojson savoy.geojson`
 
-This sorts the properties values.
+This sorts the properties values of features and the features themselves according to the `row` and `seat` values.
 This makes it easier to find sepcific seats and edit the rating manually.
+
+### Create the repo image
+
+`magick -colorspace RGB layout_ratings.pdf layout_ratings.png`
