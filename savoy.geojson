@@ -3465,6 +3465,7 @@
         {
             "type": "Feature",
             "properties": {
+                "rating": "9.5",
                 "row": "F",
                 "seat": "16"
             },
@@ -5686,6 +5687,7 @@
         {
             "type": "Feature",
             "properties": {
+                "rating": "4",
                 "row": "M",
                 "seat": "15"
             },

@@ -16,12 +16,17 @@ Execute `run.sh` to update the interpolated data, rendering it to PDFs and updat
 2. `source .venv/bin/activate`
 3. `pip install click geojson geopy`
 
-### Processing the data
+### Update and render
+
+1. `./process.py update-and-render --seat-map your-cinema-plan.geojson`
+    * If no `--seat-map path/to/file.geojson` is given, `./processed-data.geojson` will be used.
+
+### Only update estimates
 
 1. `./process.py update-estimates --seat-map your-cinema-plan.geojson`
     * If no `--output ./path/to/file.geojson` is given, `./processed-data.geojson` will be used.
 
-## Render as map
+### Only render as map
 
 1. `./process.py render`
     * If no `--seat-map path/to/file.geojson` is given, `./processed-data.geojson` will be used.
